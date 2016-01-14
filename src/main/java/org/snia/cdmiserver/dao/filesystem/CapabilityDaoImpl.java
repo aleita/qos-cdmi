@@ -71,7 +71,7 @@ public class CapabilityDaoImpl implements CapabilityDao {
 		Capability capability = new Capability();
 
 		log.debug("In Capability.findByPath, path is: " + path);
-		if (path.equals("container/")) {
+		if (path.equals("/container/")) {
 			log.debug("Container Capabilities");
 			// Container Capabilities
 			// cdmi_list_children = true
@@ -107,7 +107,7 @@ public class CapabilityDaoImpl implements CapabilityDao {
 			capability.setParentURI("cdmi_capabilities/container");
 			capability.setParentID(CONTAINERobjectID);
 
-		} else if (path.equals("dataobject/")) {
+		} else if (path.equals("/dataobject/")) {
 			// Data Object Capabilities
 			log.debug("Data Object Capabilities");
 			// cdmi_read_value = true
